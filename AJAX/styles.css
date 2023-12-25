@@ -1,0 +1,176 @@
+#tmp {
+    display: none;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+  
+#tmp.open {
+    display: block;
+}
+  
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.5);
+    transition: all 0.5s ease;
+    display: none;
+}
+  
+.popup_open {
+    display: block;
+}
+  
+.popup__container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup__wrapper {
+    padding: 40px;
+}
+
+.note {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 500px;
+    height: 200px;
+    padding-left: 10px;
+    font-feature-settings: 'liga' off;
+    font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  gap: 10px;
+}
+.note_descr,.note_btns{
+    float:left;
+    margin:0 10px;
+}
+.note_btns{
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items:self-end;
+    margin: 20px;
+    gap: 30px;
+    padding: 5px 10px;
+    
+}
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fbfbfb url('giphy.gif') no-repeat center center;
+}
+  
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s 0.2s, opacity 0.2s linear;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+
+    background-color: #ffdd2d;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color:  #fcc521;
+    } 
+    &:active {
+        background-color: #fab619;
+      }
+      &:focus {
+        border: 2px solid #9d8b2f;
+      }
+}
+body{
+ /* font-feature-settings: 'liga' off; */
+  
+  color: rgba(0, 0, 0, 0.8);;
+}
+.buttons{
+    display: flex;
+    column-gap: 20px;
+    margin: 30px 10px;
+}
+.info_text{
+    margin: 20px 20px;
+
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 48px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+select {
+    width: 105px;
+    height: 35px;
+    padding: 5px 35px 5px 5px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/uploads/media/default/0001/02/f7b4d3d2ba3fe1d8518e6e63d7740e1e73921abf.png") 96% / 15% no-repeat #eee;
+    }
+    select::-ms-expand { 
+    display: none; /* удалите стрелку по умолчанию в IE 10 и 11 */
+    }
+.popup__wrapper{
+    font-feature-settings: 'liga' off;
+    font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.wrap_btns{
+    display: flex;
+    
+    column-gap: 20px;
+    margin: 30px 10px;
+}
+textarea{
+    padding-bottom:250px ;
+  font-size:16px;
+  height: 2px;
+  width: 10px;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}

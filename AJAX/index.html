@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>TODO</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    
+    <!--Блок для списка дел-->
+    <div class="info_text">Todo app</div>
+    <div class="buttons">
+    
+      <div class="create_button"><button onclick="openForm()">Создать запись</button></div>
+    
+    </div>
+
+    <div id="notes">
+
+    </div>
+  
+    <div id="preloader" class="hidden"></div>
+
+    <!-- Блок - всплывающее окно -->
+    <div class="popup">
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div id="tmp">
+            <form id="form" autocomplete="off" onsubmit="return onSubmit();">
+              <p>
+                  <label>Заголовок:</label>
+                  <input type="text" id="title">
+              </p>
+              <p>
+                  <label>Описание:</label>
+                  <input type="text" id="description">
+              </p>
+              <p>
+                  <label>ID пользователя:</label>
+                  <select id="ids">
+                      <option selected>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                  </select>
+              </p>
+              <p>
+                <label>Важность:</label>
+                  <select id="importance">
+                      <option>Срочное</option>
+                      <option selected>Обычное</option>
+                  </select>
+              </p>
+              <div class="wrap_btns">
+                <div> <button  type="submit" id="addNote">Сохранить</button></div>
+                <div><button  type="reset" id="reset" onclick="onReset()">Отмена</button>
+                </div>
+              </div>
+                 
+                  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
